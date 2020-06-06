@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+
+
+
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/HomeToolbarID"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:text="Users Info"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/ButtonlayoutID"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/HomeToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:background="@drawable/click_button_ripple"
+                android:id="@+id/RegisterButtonID"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/userid"
+                        android:src="@drawable/user"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_below="@+id/userid"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Creating An Account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:background="@drawable/click_button_ripple"
+
+                android:id="@+id/MessageID"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/chatid"
+                        android:src="@drawable/message"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_below="@+id/chatid"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/ButtonlayoutID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/MainViewID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

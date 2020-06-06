@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    android:background="@drawable/bottomsheed_design">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/RegisteTextID"
+        android:text="Register Account"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EmailID"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/RegisteTextID"
+        android:layout_marginTop="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:hint="Enter email"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/PasswordEID"
+        android:layout_below="@+id/EmailID"
+        android:layout_marginTop="10dp"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:hint="Enter password"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/registerButtonIDs"
+        android:layout_below="@+id/PasswordEID"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="10dp"
+        android:elevation="1dp"
+        android:background="@drawable/admin_register_buttondesign"
+        android:layout_height="45dp">
+
+        <RelativeLayout
+            android:background="@drawable/register_button_ripple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:text="Register Account"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/ProgressbarID"
+        android:layout_below="@+id/PasswordEID"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:indeterminate="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
