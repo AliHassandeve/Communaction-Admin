@@ -48,13 +48,11 @@ public class RegisterOpen_helper extends BottomSheetDialogFragment {
                 final String emailget = email.getEditText().getText().toString();
                 final String passwordget = password.getEditText().getText().toString();
 
-                if(emailget.isEmpty()){
+                if (emailget.isEmpty()) {
                     email.setError("Email require");
-                }
-                else if(passwordget.isEmpty()){
+                } else if (passwordget.isEmpty()) {
                     password.setError("Password require");
-                }
-                else{
+                } else {
 
                     Mprogress.setVisibility(View.VISIBLE);
 
@@ -63,14 +61,13 @@ public class RegisterOpen_helper extends BottomSheetDialogFragment {
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if(task.isSuccessful()){
+                                    if (task.isSuccessful()) {
                                         Mprogress.setVisibility(View.INVISIBLE);
                                         Toast.makeText(getContext(), "Account is creating success", Toast.LENGTH_LONG).show();
 
 
-                                        sendmail();
-                                        String subject = "Your account has been successfully created. We are very grateful for having you with us. Kindly use the following credentials to login to your account\n\n";
-                                        String message = "Your email address is: "+emailget+"\n"+"Your password is: "+passwordget;
+                                        String subject = R.string.subject + "\n\n";
+                                        String message = R.string.message + "\n" + emailget + "\n" + "Your password is: " + passwordget;
 
                                         Intent intent = new Intent(Intent.ACTION_SEND);
                                         intent.putExtra(Intent.EXTRA_EMAIL, "");
@@ -80,8 +77,7 @@ public class RegisterOpen_helper extends BottomSheetDialogFragment {
                                         intent.setType("message/rfc822");
                                         startActivity(Intent.createChooser(intent, "open your email clint"));
 
-                                    }
-                                    else {
+                                    } else {
                                         Mprogress.setVisibility(View.INVISIBLE);
                                         Toast.makeText(getContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                     }
@@ -103,8 +99,5 @@ public class RegisterOpen_helper extends BottomSheetDialogFragment {
         return Mview;
     }
 
-    private void sendmail(){
 
-
-    }
 }

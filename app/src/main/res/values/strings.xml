@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">IntarahubAdmin</string>
+
+    <string name="message">Your account has been successfully created. We are very grateful for having you with us. Kindly use the following credentials to login to your account</string>
+    <string name="subject">Account Creation</string>
+
+
 </resources>
